@@ -78,7 +78,7 @@ function checkAlarms() {
     const currentHours = currentTime.getHours();
     const currentMinutes = currentTime.getMinutes();
     const currentSeconds = currentTime.getSeconds();
-    const currentTimeString = `${currentHours - 12 < 10 ? "0" + currentHours - 12 : currentHours - 12}:${currentMinutes < 10 ? '0' + currentMinutes : currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds} ${currentHours >= 12 ? 'PM' : 'AM'}`;
+    const currentTimeString = `${currentHours - 12 < 10 ? "0" + (currentHours - 12) : currentHours - 12}:${currentMinutes < 10 ? '0' + currentMinutes : currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds} ${currentHours >= 12 ? 'PM' : 'AM'}`;
 
     const alarms = document.querySelectorAll(".alarm-list-div");
     // console.log(alarms)
